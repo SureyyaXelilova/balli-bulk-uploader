@@ -101,7 +101,11 @@ export default function App() {
       "https://savey.az/api/partner/balli-products/bulk",
       {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key":
+            "57ff1003070f4801bfb8f66bb5b09ef7cd17474ba6b1ace6c21eec32e71e59fe",
+        },
         body: JSON.stringify(products),
       },
     );
