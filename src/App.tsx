@@ -8,14 +8,17 @@ export default function App() {
       formData.append("branchId", "9");
       formData.append("categoryId", "14");
 
-      const res = await fetch("/savey-api/api/partner/product-imports/upload", {
-        method: "POST",
-        headers: {
-          "X-API-Key":
-            "57ff1003070f4801bfb8f66bb5b09ef7cd17474ba6b1ace6c21eec32e71e59fe",
+      const res = await fetch(
+        "https://savey.az/api/partner/product-imports/upload",
+        {
+          method: "POST",
+          headers: {
+            "X-API-Key":
+              "57ff1003070f4801bfb8f66bb5b09ef7cd17474ba6b1ace6c21eec32e71e59fe",
+          },
+          body: formData,
         },
-        body: formData,
-      });
+      );
 
       const data = await res.json().catch(() => null);
 
